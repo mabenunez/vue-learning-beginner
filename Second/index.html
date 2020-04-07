@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="increaseCounter(3, $e)" >click me</button>
+        <p>{{ counter }}</p>
+        <h2 v-on:mousemove="coordinates">Mouse coordinates: x = {{ x }} y= {{ y }}
+            <span v-on:mousemove="dead">---- Dead spot ---- </span>
+            <br/>
+            <span v-on:mousemove.stop>---- Dead spot (vue event modifier) ---- </span>
+        </h2>
+        <input type="text" v-on:keyup.enter="alertMe">
+    </div>
+  <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
